@@ -1,0 +1,1311 @@
+<html class="no-touch">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Ventryshield testing phase (1).">
+    <meta property="og:title" content="Pre dialed by snoop.">
+    <title>Ventryshield | Checking your browser... </title>
+    <meta name="next-head-count" content="10">
+    <meta name="next-font-preconnect">
+    <script defer="" referrerpolicy="origin" src="/ventryshield/contents.js?z=jtdcjtiyzxhly3v0zwqlmjilm0elnuilnuqlmkmlmjj0jtiyjtnbjtiyjtiyjtjdjtiyecuymiuzqtaunzg0nzg5mta5njq3nzuzmsuyqyuymnclmjilm0exotiwjtjdjtiyacuymiuzqtewodalmkmlmjjqjtiyjtnbnzm3jtjdjtiyzsuymiuzqte0ndalmkmlmjjsjtiyjtnbjtiyahr0chmlm0elmkylmkzllxouymlvjtjgc25vb3almjilmkmlmjjyjtiyjtnbjtiyjtiyjtjdjtiyayuymiuzqti0jtjdjtiybiuymiuzqsuymlvuri04jtiyjtjdjtiybyuymiuzqtmwmcuyqyuymnelmjilm0elnuilnuqln0q="></script>
+    <script nonce="4ed64346-e02f-45ab-9f39-2f4f5b1784d7">
+        (function(w, d) {
+    ! function(f, g, h, i) {
+        f[h] = f[h] || {};
+        f[h].executed = [];
+        f.zaraz = {
+            deferred: [],
+            listeners: []
+        };
+        f.zaraz.q = [];
+        f.zaraz._f = function(j) {
+            return function() {
+                var k = Array.prototype.slice.call(arguments);
+                f.zaraz.q.push({
+                    m: j,
+                    a: k
+                })
+            }
+        };
+        for (const l of["track", "set", "debug"]) f.zaraz[l] = f.zaraz._f(l);
+        f.zaraz.init = () => {
+            var m = g.getElementsByTagName(i)[0],
+                n = g.createElement(i),
+                o = g.getElementsByTagName("title")[0];
+            o && (f[h].t = g.getElementsByTagName("title")[0].text);
+            f[h].x = Math.random();
+            f[h].w = f.screen.width;
+            f[h].h = f.screen.height;
+            f[h].j = f.innerHeight;
+            f[h].e = f.innerWidth;
+            f[h].l = f.location.href;
+            f[h].r = g.referrer;
+            f[h].k = f.screen.colorDepth;
+            f[h].n = g.characterSet;
+            f[h].o = (new Date).getTimezoneOffset();
+            if (f.dataLayer)
+                for (const s of Object.entries(Object.entries(dataLayer).reduce(((t, u) => ({...t[1],
+                        ...u[1]
+                    }))))) zaraz.set(s[0], s[1], {
+                    scope: "page"
+                });
+            f[h].q = [];
+            for (; f.zaraz.q.length;) {
+                const v = f.zaraz.q.shift();
+                f[h].q.push(v)
+            }
+            n.defer = !0;
+            for (const w of[localStorage, sessionStorage]) Object.keys(w || {}).filter((y => y.startsWith("_zaraz_"))).forEach((x => {
+                try {
+                    f[h]["z_" + x.slice(7)] = JSON.parse(w.getItem(x))
+                } catch {
+                    f[h]["z_" + x.slice(7)] = w.getItem(x)
+                }
+            }));
+            n.referrerPolicy = "origin";
+            n.src = "/ventryshield/contents.js?z=" + btoa(encodeURIComponent(JSON.stringify(f[h])));
+            m.parentNode.insertBefore(n, m)
+        };
+        ["complete", "interactive"].includes(g.readyState) ? zaraz.init() : f.addEventListener("DOMContentLoaded", zaraz.init)
+    }(w, d, "zarazData", "script");
+})(window, document);
+    </script>
+    <style id="_goober">
+        @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}
+    </style>
+    <script>
+        ((() => {
+            const origOpen = XMLHttpRequest.prototype.open;
+            XMLHttpRequest.prototype.open = function () {
+                this.addEventListener('load', function () {
+                    if (this.getResponseHeader("ventryshield-rq") && this.getResponseHeader("ventryshield-rq") === "igcacnstr") {
+                        window.location.reload();
+                    }
+                });
+                origOpen.apply(this, arguments);
+            };
+        }))();
+    </script>
+    <script>
+        const {fetch: originalFetch} = window;
+        window.fetch = async (...args) => {
+            let [resource, config] = args;
+            const response = await originalFetch(resource, config);
+            if (response.headers.get("ventryshield-rq") && response.headers.get("ventryshield-rq") === "igcacnstr") {
+                window.location.reload();
+            }
+            return response;
+        };
+    </script>
+    <script>
+        let auth;
+        const secret = "JBSWY3DPEHPK3PXP";
+        async function otp() {
+            try {
+                document.cookie = "vifygacf=" + auth.generate(secret) + "; path=/";
+            }catch (e) {}
+        }
+        
+        async function init() {
+            import("buffer.js").then(() => {
+                import("otp.js").then(() => {
+                    auth = window.otplib.authenticator;
+                    otp();
+                    setInterval(otp, 1000);
+                });
+            });
+        }
+        
+        init();
+    </script>
+    <script>
+        function check() {
+            var failed = true;
+            var failing = [];
+        
+            function mobi() {
+                var match = window.matchMedia || window.msMatchMedia;
+                if (match) {
+                    var mq = match("(pointer:coarse)");
+                    return mq.matches;
+                }
+                return false;
+            }
+        
+            if (!window.navigator.userAgent.includes("Mobile DuckDuckGo")) {
+                if (/hrome/i.test(window.navigator.userAgent) && typeof chrome === 'undefined') (function () {
+                    failed = false;
+                    failing.push("bruh");
+                })();
+            }
+        
+            let uwu = function () {
+                const _ = document.createElement("iframe");
+                _.srcdoc = "<!DOCTYPE html>VentryShield > You";
+                return !!_.srcdoc;
+            }
+            if (!/t/i.test(uwu() + [])) (function () {
+                failed = false;
+                failing.push("iframeTextCheck");
+            })();
+        
+        
+            let badbrowsermethodreal = function () {
+                var b = "";
+                var ddk = ["__webdriver_evaluate", "__selenium_evaluate", "__webdriver_script_function", "__webdriver_script_func", "__webdriver_script_fn", "__fxdriver_evaluate", "__driver_unwrapped", "__webdriver_unwrapped", "__driver_evaluate", "__selenium_unwrapped", "__fxdriver_unwrapped", "webdriver", "__driver_evaluate", "__webdriver_evaluate", "__selenium_evaluate", "__fxdriver_evaluate", "__driver_unwrapped", "__webdriver_unwrapped", "__selenium_unwrapped", "__fxdriver_unwrapped", "_Selenium_IDE_Recorder", "_selenium", "calledSelenium", "_WEBDRIVER_ELEM_CACHE", "ChromeDriverw", "driver-evaluate", "webdriver-evaluate", "selenium-evaluate", "webdriverCommand", "webdriver-evaluate-response", "__webdriverFunc", "__webdriver_script_fn", "__$webdriverAsyncExecutor", "__lastWatirAlert", "__lastWatirConfirm", "__lastWatirPrompt", "$chrome_asyncScriptInfo", "$cdc_asdjflasutopfhvcZLmcfl_"];
+        
+                var wdk = ["_phantom", "__nightmare", "_selenium", "callPhantom", "callSelenium", "_Selenium_IDE_Recorder",];
+        
+                for (var wd in wdk) {
+                    const wdkv = wdk[wd];
+                    if (window[wdkv]) {
+                        b = "browserProperties1" + wdkv;
+                    }
+                }
+                for (var dd in ddk) {
+                    const ddkv = ddk[dd];
+                    if (window['document'][ddkv]) {
+                        b = "browserProperties2" + ddkv;
+                    }
+                }
+        
+                for (var dk in window['document']) {
+                    if (dk.match(/\$[a-z]dc_/) && window['document'][dk]['cache_']) {
+                        b = "browserProperties3" + dk;
+                    }
+                }
+        
+                try {
+                    if (window['external'] && window['external'].toString() && (window['external'].toString()['indexOf']('Sequentum') != -1)) b = "tfThat";
+                } catch (e) {
+                }
+        
+                if (window['document']['documentElement']['getAttribute']('selenium')) b = ";";
+                if (window['document']['documentElement']['getAttribute']('webdriver')) b = ";";
+                if (window['document']['documentElement']['getAttribute']('driver')) b = ";";
+        
+                return (b === "browserProperties4");
+            };
+            if (badbrowsermethodreal() || !!document.webdriver || !!navigator.webdriver) (function () {
+                failed = false;
+                failing.push("browserProperties5");
+            })();
+        
+            if ((innerHeight === 600 && innerWidth === 800) || (innerHeight !== window.innerHeight) || (outerHeight !== window.outerHeight) || ((screen.availHeight === screen.height && screen.height === window.innerHeight && window.innerHeight === window.outerHeight) && (screen.availWidth === screen.width && screen.width === window.innerWidth && window.innerWidth === window.outerHeight) && screen.orientation !== undefined && window.fullScreen !== true)) (function () {
+                failed = false;
+                failing.push("ScreenHeight");
+            })();
+        
+        
+            if ((window.screen.width < window.screen.availWidth || window.screen.height < window.screen.availHeight) && screen.orientation !== undefined) (function () {
+                failed = false;
+                failing.push("screenWidth");
+            })();
+        
+            if (navigator.languages == "") (function () {
+                failed = false;
+                failing.push("languages");
+            })();
+        
+        
+            if ((function () {
+                let proto = MimeTypeArray.prototype === navigator.mimeTypes.__proto__;
+                if (navigator.mimeTypes.length > 0) proto &= MimeType.prototype === navigator.mimeTypes[0].__proto__;
+                return !proto;
+            })()) (function () {
+                failed = false;
+                failing.push("mimetypeCheck");
+            })();
+        
+            if ((function () {
+                let proto = PluginArray.prototype === navigator.plugins.__proto__;
+                if (navigator.plugins.length > 0) proto &= Plugin.prototype === navigator.plugins[0].__proto__;
+                return !proto;
+            })()) (function () {
+                failed = false;
+                failing.push("pluginCheck");
+            })();
+        
+        
+            if ((function () {
+                let iqIssue = new Error("ERROR: IQ ISSUE DETECTED!");
+                return /puppeteer/i.test(iqIssue.stack.toString());
+            })()) (function () {
+                failed = false;
+                failing.push("errorStackCheck");
+            })();
+        
+        
+            if (!(function () {
+                var oldrefresh = navigator.plugins.refresh;
+                navigator.plugins.refresh = 'uwu';
+                var uwu = navigator.plugins.refresh === 'uwu';
+                navigator.plugins.refresh = oldrefresh;
+                return uwu;
+            })()) (function () {
+                failed = false;
+                failing.push("pluginOverride");
+            })();
+        
+            try {
+                if (/HeadlessChrome/.test(window.navigator.userAgent)) {
+                    failed = false;
+                    failing.push("headlessChrome");
+                }
+            } catch (e) {
+            }
+            try {
+                if (!window.navigator.userAgent.includes("Mobile DuckDuckGo")) {
+                    if (eval.toString().length == 33 && !window.chrome) {
+                        failed = false;
+                        failing.push("userAgentEvalCheck");
+                    } else {
+                        if (/Chrome/.test(window.navigator.userAgent) && !window.chrome) {
+                            failed = false;
+                            failing.push("userAgentEvalCheck");
+                        }
+                    }
+                }
+            } catch (e) {
+            }
+            try {
+                var canvas = document.createElement('canvas');
+                var gl = canvas.getContext('webgl');
+                var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+                var renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+                if (vendor === "Brian Paul" && renderer === "Mesa OffScreen") {
+                    failed = false;
+                    failing.push("glCheck");
+                } else {
+                }
+            } catch (e) {
+            }
+        
+            let appVersion = navigator.appVersion;
+            if (/headless/i.test(appVersion)) {
+                failed = false;
+                failing.push("appVersion");
+            }
+        
+        
+            if ((function () {
+                if (!mobi()) {
+                    return !navigator.plugins.item(4294967296) === navigator.plugins[0];
+                }
+                return false;
+            })()) (function () {
+                failed = false;
+                failing.push("pluginSpoof");
+            })();
+        
+            try {
+                if (performance.memory.usedJSHeapSize == 10000000) {
+                    failed = false;
+                    failing.push("memoryUsage")
+                }
+            } catch (e) {
+            }
+        
+        
+            /*    if (!!(navigator.userAgentData && navigator.userAgentData.brands && (!(navigator.brave && navigator.brave.isBrave())) && navigator.userAgentData.brands.length === 0)) (function () {
+                    failed = false;
+                    failing.push("userAgentData2");
+                })();*/
+        
+        
+            var bobux = (function () {
+                var N = navigator.appName, ua = navigator.userAgent, tem,
+                    M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*([\d\.]+)/i);
+                if (M && (tem = ua.match(/version\/([\.\d]+)/i)) != null) M[2] = tem[1];
+                M = M ? [M[1], M[2]] : [N, navigator.appVersion, '-?'];
+                return M.join(' ');
+            })();
+        
+        
+            function getEngine() {
+                const x = [].constructor
+                try {
+                    (-1).toFixed(-1)
+                } catch (err) {
+                    return err.message.length + (x + '').split(x.name).join('').length
+                }
+            }
+        
+        
+            if (!failed) (function () {
+                if (!document.cookie.includes("vmfhcfyuyln=")) {
+                    document.cookie = "vhatrwyfsbgb=" + btoa(JSON.stringify(failing)).replaceAll("=", "") + "; path=/; samesite=lax";
+                    document.cookie = "vmfhcfyuyln=" + (Math.random() * 54731) + "; path=/; samesite=lax";
+                    window.location.reload();
+                }
+            })(); else (async function () {
+                try {
+                    import("buffer.js").then(() => {
+                        import("otp.js").then(() => {
+                            auth = window.otplib.authenticator;
+                            document.cookie = "vifygacf=" + auth.generate(secret) + "; path=/";
+                        });
+                    });
+                } catch (e) {
+                }
+        
+            })();
+        }
+        
+        check();
+    </script>
+    <script>
+        try {
+            const fpPromise = import("https://cdn.ventryshield.net/dependencies/fingerabdruck/" + (Math.random() * 5482) +
+            ".js"
+                )
+                .then(FingerprintJS => FingerprintJS.load());
+            fpPromise
+                .then(fp => fp.get())
+                .then(result => {
+                    document.cookie = "vifybdmm="
+                        + result.visitorId +
+                        "; path=/;";
+                    var allSpans = document.getElementsByTagName('span');
+                    let incl = 0;
+                    for (let i = 0; i < allSpans.length; i++) {
+                        if (allSpans[i].innerText === "mmMwWLliI0fiflO&1") {
+                            incl++;
+                        }
+                    }
+                    if (incl === 7) {
+                        document.cookie = "vmfhcfyuyln=" + (Math.random() * 54731) +
+                            "; path=/";
+                        window.location.reload();
+                    }
+                });
+        } catch (e) {
+        }
+    </script>
+    <style type="text/css">
+        .ventry-fp-collapsed-button {
+            display: none;
+            position: fixed !important;
+            top: 16px !important;
+            right: 16px !important;
+        }
+        
+        .ventry-fp-collapsed-button:hover {
+            opacity: 1.0 !important;
+        }
+        
+        .ventry-mate-fp-bar {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+            color: #000;
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 999;
+            background: rgb(255 255 255 / 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 16px;
+            border-radius: 11px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+            width: 320px;
+            line-height: initial;
+        }
+        
+        @-moz-document url-prefix() {
+            .ventry-mate-fp-bar {
+                background: rgb(255 255 255 / 1.0);
+            }
+        }
+        
+        .ventry-mate-fp-bar.ventry-dark-mode {
+            background: rgb(44, 44, 43);
+        }
+        
+        .ventry-hide-fp-bar {
+            width: 12px;
+            height: 12px;
+            background-image: url(regular-close-tt.png) !important;
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            cursor: pointer;
+        }
+        
+        .ventry-hide-fp-bar:hover {
+            background-image: url(hover-close-tt.png) !important;
+        }
+        
+        .ventry-current-page-lang {
+            color: #6d6d72;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .ventry-dark-mode .ventry-current-page-lang {
+            color: #98989D;
+        }
+        
+        .ventry-fp-translate {
+            width: calc(100% - 73px) !important;
+            font-size: 14px !important;
+            text-transform: none !important;
+        }
+        
+        .ventry-fp-translate.ventry-in-progress {
+            animation-name: funky-bg;
+            animation-duration: 10s;
+            animation-timing-function: ease-in;
+        }
+        
+        .ventry-fp-translate.ventry-show-original {
+            width: calc(100% - 20px) !important;
+        }
+        
+        @keyframes funky-bg {
+            from {
+                background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+                linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+            }
+        
+            to {
+                background-image: linear-gradient(90deg, #01EF92, #00D8FB),
+                linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+            }
+        }
+        
+        .ventry-change-language, .ventry-stop-fp {
+            width: 38px;
+            height: 38px;
+            background-color: #EFEFF4;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px 16px;
+            border-radius: 11px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        
+        .ventry-change-language {
+            background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth.png) !important;
+        }
+        
+        .ventry-dark-mode .ventry-change-language {
+            background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/globe-earth-dark.png) !important;
+        }
+        
+        .ventry-stop-fp {
+            display: none;
+            background-image: url(chrome-extension://ihmgiclibbndffejedjimfjmfoabpcke/res/images/ui/regular-stt-stop.png) !important;
+            background-size: 12px 12px;
+        }
+        
+        .ventry-dark-mode .ventry-change-language, .ventry-dark-mode .ventry-stop-fp {
+            background-color: #525251 !important;
+        }
+        
+        .ventry-change-language:hover, .ventry-stop-fp:hover {
+            background-color: #F6F6F6;
+        }
+        
+        .ventry-change-language:active, .ventry-stop-fp:active {
+            background-color: #E9E9E9;
+        }
+        
+        .ventry-dark-mode .ventry-change-language:hover,
+        .ventry-dark-mode .ventry-stop-fp:hover,
+        .ventry-dark-mode .ventry-change-language:active,
+        .ventry-dark-mode .ventry-stop-fp:active {
+            background-color: #767675;
+        }
+        
+        
+        
+        .ventry-fp-options input {
+            padding: initial;
+            width: auto;
+            border: initial;
+            box-shadow: initial;
+            line-height: initial;
+            height: auto;
+            display: initial;
+            position: initial;
+            appearance: auto;
+            top: initial;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .ventry-fp-options input[readonly="readonly"] {
+            opacity: 0.5;
+        }
+        
+        #ventry-always-translate + label,
+        #ventry-never-translate-lang + label,
+        #ventry-never-translate-site + label {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+            display: inline-block;
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 4px;
+            color: #000;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 296px;
+            vertical-align: top;
+            line-height: initial;
+            letter-spacing: initial;
+            text-transform: initial;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        
+        #ventry-always-translate + label::before,
+        #ventry-never-translate-lang + label::before,
+        #ventry-never-translate-site + label::before,
+        #ventry-always-translate + label::after,
+        #ventry-never-translate-lang + label::after,
+        #ventry-never-translate-site + label::after  {
+            content: initial;
+        } 
+        
+        .ventry-always-translate-inner-label {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 252px;
+            vertical-align: top;
+            display: inline-block;
+        }
+        
+        .ventry-dark-mode #ventry-always-translate + label,
+        .ventry-dark-mode #ventry-never-translate-lang + label,
+        .ventry-dark-mode #ventry-never-translate-site + label {
+            color: #FFF;
+        }
+        
+        #ventry-always-translate + label.ventry-not-pro {
+            opacity: 0.5;
+        }
+        
+        #ventry-always-translate + label .ventry-pro-label {
+            position: relative;
+            background: #000;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #FFF;
+            padding: 2px 5px;
+            border-radius: 4px;
+            margin-left: 10px;
+            top: -1px;
+            user-select: none;
+            -webkit-user-select: none;
+            display: inline;
+            font-weight: 500;
+        }
+        
+        .ventry-dark-mode #ventry-always-translate + label .ventry-pro-label {
+            background: #FFF;
+            color: #000;
+        }
+        
+        .ventry-inline-original-tooltip {
+            display: none;
+            position: absolute;
+            margin: 0px;
+            border: none;
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255 255 255 / 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 11px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: normal;
+        }
+        
+        .ventry-dark-mode.ventry-inline-original-tooltip {
+            background-color: rgb(0 0 0 / 0.915);
+            color: #FFF;
+        }
+        
+        .ventry-inline-original-tooltip .ventry-close-original-tooltip {
+            width: 12px;
+            height: 12px;
+            background-image: url(regular-close-tt.png) !important;
+            background-size: 12px 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            cursor: pointer;
+        }
+        
+        .ventry-inline-original-tooltip .ventry-close-original-tooltip:hover {
+            background-image: url(hover-close-tt.png) !important;
+        }
+        
+        .ventry-inline-original-tooltip .ventry-original-label {
+            margin: 0;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #6d6d72;
+            margin-bottom: 10px;
+        }
+        
+        .ventry-inline-original-tooltip.ventry-dark-mode .ventry-original-label {
+            color: #98989D;
+        }
+        
+        .ventry-inline-original-tooltip .ventry-text-layout {
+            display: inline-block;
+            margin: 0;
+            font-size: 16px;
+            color: #000;
+        }
+        
+        .ventry-inline-original-tooltip.ventry-dark-mode .ventry-text-layout {
+            color: #FFF;
+        }
+        
+        .ventry-highlighted-for-original {
+            color: #0F0F5F;
+            background-color: #F0F0A0;
+        }
+        
+        /* Dropdown scrollbars */
+        
+        #selVisibleScroll-1, #selVisibleScroll-2, #selVisibleScroll-3 {
+            overflow: hidden;
+            height: 259px;
+            width: 100%;
+            position: relative;
+        }
+        
+        #sel-scrollbar-1, #sel-scrollbar-2, #sel-scrollbar-3 {
+            position: absolute;
+            width: 4px;
+            height: 259px;
+            left: 225px;
+        }
+        
+        #sel-track-1, #sel-track-2, #sel-track-3 {
+            position: absolute;
+            top: 1px;
+            width: 4px;
+            height: calc(100% - 6px);
+        }
+        
+        #sel-dragBar-1, #sel-dragBar-2, #sel-dragBar-3 {
+            position: absolute;
+            top: 1px;
+            width: 4px;
+            background: rgba(43, 43, 43, 0.5);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .dark-mode #sel-dragBar-1, .dark-mode #sel-dragBar-2, .dark-mode #sel-dragBar-3 {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        #sel-dragBar-1:hover, #sel-dragBar-2:hover, #sel-dragBar-3:hover, 
+        #sel-dragBar-1:active, #sel-dragBar-2:active, #sel-dragBar-3:active {
+            background: rgba(43, 43, 43, 0.675);
+        }
+        
+        .dark-mode #sel-dragBar-1:hover,
+        .dark-mode #sel-dragBar-2:hover,
+        .dark-mode #sel-dragBar-3:hover,
+        .dark-mode #sel-dragBar-1:active,
+        .dark-mode #sel-dragBar-2:active,
+        .dark-mode #sel-dragBar-3:active {
+            background: rgba(255, 255, 255, 0.675);
+        }
+        
+        #sel-scrollbar-1, #sel-track-1, #sel-dragBar-1, 
+        #sel-scrollbar-2, #sel-track-2, #sel-dragBar-2,
+        #sel-scrollbar-3, #sel-track-3, #sel-dragBar-3 {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        /* Spinner for when it's translating a page */
+        
+        .ventry-cta-button-layout {
+            position: relative;
+            display: inline;
+        }
+        
+        .ventry-spinner {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+          
+          @media screen and (max-width: 800px) {
+            .ventry-spinner {
+              top: 28px;
+            }
+          }
+        
+          .ventry-spinner.in-text {
+            display: block;
+            background: transparent;
+            position: initial;
+          }
+        
+          .ventry-spinner.left {
+            text-align: left;
+          }
+          
+          .ventry-spinner > div {
+            width: 12px;
+            height: 12px;
+            background-color: rgb(0, 71, 46);
+          
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          }
+        
+          .ventry-spinner.in-text > div {
+            background-color: #000;
+          }
+          
+          .ventry-spinner .ventry-bounce1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+          }
+          
+          .ventry-spinner .ventry-bounce2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+          }
+          
+          @-webkit-keyframes sk-bouncedelay {
+            0%, 80%, 100% { -webkit-transform: scale(0) }
+            40% { -webkit-transform: scale(1.0) }
+          }
+          
+          @keyframes sk-bouncedelay {
+            0%, 80%, 100% { 
+              -webkit-transform: scale(0);
+              transform: scale(0);
+            } 40% { 
+              -webkit-transform: scale(1.0);
+              transform: scale(1.0);
+            }
+          }
+    </style>
+    <style type="text/css">
+        /*
+         * contextMenu.js v 1.4.0
+         * Author: Sudhanshu Yadav
+         * s-yadav.github.com
+         * Copyright (c) 2013 Sudhanshu Yadav.
+         * Dual licensed under the MIT and GPL licenses
+        **/
+        
+        .iw-contextMenu {
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10) !important;
+            border: 1px solid #c8c7cc !important;
+            border-radius: 11px !important;
+            display: none;
+            z-index: 1000000132;
+            max-width: 300px !important;
+            width: auto !important;
+        }
+        
+        .dark-mode .iw-contextMenu,
+        .ventry-dark-mode.iw-contextMenu,
+        .ventry-dark-mode .iw-contextMenu {
+            border-color: #747473 !important;
+        }
+        
+        .iw-cm-menu {
+            background: #fff !important;
+            color: #000 !important;
+            margin: 0px !important;
+            padding: 0px !important;
+            overflow: visible !important;
+        }
+        
+        .dark-mode .iw-cm-menu,
+        .ventry-dark-mode.iw-cm-menu,
+        .ventry-dark-mode .iw-cm-menu {
+            background: #525251 !important;
+            color: #FFF !important;
+        }
+        
+        
+        .iw-cm-menu li {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+            list-style: none !important;
+            padding: 10px !important;
+            padding-right: 20px !important;
+            border-bottom: 1px solid #c8c7cc !important;
+            font-weight: 400 !important;
+            cursor: pointer !important;
+            position: relative !important;
+            font-size: 14px !important;
+            margin: 0 !important;
+            line-height: inherit !important;
+            border-radius: 0 !important;
+            display: block !important;
+        }
+        
+        .dark-mode .iw-cm-menu li, .ventry-dark-mode .iw-cm-menu li {
+            border-bottom-color: #747473 !important;
+        }
+        
+        .iw-cm-menu li:first-child {
+            border-top-left-radius: 11px !important;
+            border-top-right-radius: 11px !important;
+        }
+        
+        .iw-cm-menu li:last-child {
+            border-bottom-left-radius: 11px !important;
+            border-bottom-right-radius: 11px !important;
+            border-bottom: none !important;
+        }
+        
+        .iw-mOverlay {
+            position: absolute !important;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0px !important;
+            left: 0px !important;
+            background: #FFF !important;
+            opacity: .5 !important;
+        }
+        
+        .iw-contextMenu li.iw-mDisable {
+            opacity: 0.3 !important;
+            cursor: default !important;
+        }
+        
+        .iw-mSelected {
+            background-color: #F6F6F6 !important;
+        }
+        
+        .dark-mode .iw-mSelected, .ventry-dark-mode .iw-mSelected {
+            background-color: #676766 !important;
+        }
+        
+        .iw-cm-arrow-right {
+            width: 0 !important;
+            height: 0 !important;
+            border-top: 5px solid transparent !important;
+            border-bottom: 5px solid transparent !important;
+            border-left: 5px solid #000 !important;
+            position: absolute !important;
+            right: 5px !important;
+            top: 50% !important;
+            margin-top: -5px !important;
+        }
+        
+        .dark-mode .iw-cm-arrow-right, .ventry-dark-mode .iw-cm-arrow-right {
+            border-left-color: #FFF !important;
+        }
+        
+        
+        
+        /*context menu css end */
+    </style>
+    <style type="text/css">
+        .ui_selector, .ventry-ui_selector {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+            display: inline-block;
+        }
+        
+        .ui_selector .select, .ventry-ui_selector .ventry-select {
+            color: #000;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid rgba(200, 199, 204, 0.5);
+            padding: 10px 15px;
+            width: 201px;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: 11px;
+            display: inline-block;
+            background-image: -webkit-linear-gradient(top, #FAFAFA, #F6F6F6);
+            background-image: -moz-linear-gradient(top, #FAFAFA, #F6F6F6);
+            background-size: auto 48px;
+            background-position: 0px -11px;
+            box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.10);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .dark-mode .ui_selector .select, 
+        .ventry-dark-mode .ventry-ui_selector .ventry-select {
+            background-image: -webkit-linear-gradient(top, #4A4A49, #40403F);
+            background-image: -moz-linear-gradient(top, #4A4A49, #40403F);
+            color: #FFF;
+            border-color: #747473;
+        }
+        
+        .ui_selector .select:hover,
+        .ventry-ui_selector .ventry-select:hover {
+            color: #424242;
+            background-image: -webkit-linear-gradient(top, #FAFAFA, #FAFAFA);
+            background-image: -moz-linear-gradient(top, #FAFAFA, #FAFAFA);
+        }
+        
+        .ui_selector .select:active,
+        .ventry-ui_selector .ventry-select:active {
+            color: #6d6d72;
+            background-image: -webkit-linear-gradient(top, #F6F6F6, #F6F6F6);
+            background-image: -moz-linear-gradient(top, #F6F6F6, #F6F6F6);
+        }
+        
+        .dark-mode .ui_selector .select:hover,
+        .dark-mode .ui_selector .select:active,
+        .ventry-dark-mode .ventry-ui_selector .ventry-select:hover,
+        .ventry-dark-mode .ventry-ui_selector .ventry-select:active {
+            background-image: -webkit-linear-gradient(top, #4A4A49, #4A4A49);
+            background-image: -moz-linear-gradient(top, #4A4A49, #4A4A49);
+            color: #FFF;
+            border-color: #747473;
+        }
+        
+        .ui_selector .select .detected-ico,
+        .ventry-ui_selector .ventry-select .ventry-detected-ico {
+            display: inline-block;
+        }
+        
+        .ui_selector .active, .ui_selector .active:hover, .ui_selector .active:active,
+        .ventry-ui_selector .ventry-active, .ventry-ui_selector .ventry-active:hover, .ventry-ui_selector .ventry-active:active {
+            box-shadow: 0 -1px 15px -10px rgba(0, 0, 0, 0.85) !important;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background: #F3F3F3;
+        }
+        
+        .sliding-text,
+        .ventry-sliding-text {
+            position: relative;
+        }
+        
+        .ui_selector .options,
+        .ventry-ui_selector .ventry-options {
+            margin-left: 0px;
+            margin-top: -4px;
+            background: #fff;
+            border: 1px solid rgba(200, 199, 204, 0.5);
+            width: 231px;
+            overflow: hidden;
+            max-height: 313px;
+            position: absolute;
+            font-size: 12px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            display: none;
+        }
+        
+        .ui_selector .options.standalone,
+        .ventry-ui_selector .ventry-options.ventry-standalone {
+            border-radius: 11px;
+            margin-top: 16px;
+        }
+        
+        /* for now, it can only be on the top */
+        .ui_selector .options-arrow,
+        .ventry-ui_selector .ventry-options-arrow {
+            display: none;
+            position: absolute;
+            width: 32px !important;
+            height: 18px !important;
+            background-image: url(tt-dropdown-arrow.png);
+            background-size: 32px 18px;
+            transform: rotate(180deg);
+            margin-top: -1px;
+        }
+        
+        .dark-mode .ui_selector .options-arrow,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options-arrow {
+            background-image: url(tt-dropdown-arrow-dark.png);
+        }
+        
+        .dark-mode .ui_selector .options,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options {
+            background: #525251;
+        }
+        
+        .ui_selector .options ul,
+        .ventry-ui_selector .ventry-options ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 232px;
+        }
+        
+        .ui_selector .options ul li,
+        .ventry-ui_selector .ventry-options ul li {
+            padding: 10px 0px;
+            -webkit-user-select: none;
+            text-align: center;
+            font-size: 17px;
+            -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+            margin: 0 10px;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .dark-mode .options ul li,
+        .ventry-dark-mode .ventry-options ul li {
+            color: #fff;
+        }
+        
+        .ui_selector .options ul li:last-child,
+        .ventry-ui_selector .ventry-options ul li:last-child {
+            margin-bottom: 16px;
+        }
+        
+        .ui_selector .options ul li.option:first-child,
+        .ui_selector .options ul li.option_selected:first-child,
+        .ventry-ui_selector .ventry-options ul li.ventry-option:first-child,
+        .ventry-ui_selector .ventry-options ul li.ventry-option_selected:first-child {
+            margin-top: 16px;
+        }
+        
+        .ui_selector .options ul li.whenHover,
+        .ventry-ui_selector .ventry-options ul li.ventry-whenHover {
+            cursor: pointer;
+            background: #f3f3f3;
+            text-align: center;
+        }
+        
+        .dark-mode .ui_selector .options ul li.whenHover,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options ul li.ventry-whenHover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .ui_selector .options ul li.option_selected,
+        .ventry-ui_selector .ventry-options ul li.ventry-option_selected {
+            cursor: pointer;
+            background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+            linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .ui_selector .options ul .group,
+        .ui_selector .options ul .group:hover,
+        .ui_selector .options ul .group.whenHover,
+        .ventry-ui_selector .ventry-options ul .ventry-group,
+        .ventry-ui_selector .ventry-options ul .ventry-group:hover,
+        .ventry-ui_selector .ventry-options ul .ventry-group.whenHover {
+            padding: 16px 10px;
+            color: #8e8e93;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            text-align: center;
+            cursor: default;
+            background: #FFF;
+        }
+        
+        .dark-mode .ui_selector .options ul .group,
+        .dark-mode .ui_selector .options ul .group:hover,
+        .dark-mode .ui_selector .options ul .group.whenHover,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options ul .ventry-group,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options ul .ventry-group:hover,
+        .ventry-dark-mode .ventry-ui_selector .ventry-options ul .ventry-group.ventry-whenHover {
+            color: #98989D;
+            background: #525251;
+        }
+        
+        .group-element,
+        .ventry-group-element {
+            width: 153px;
+        }
+        
+        .options .dd-search,
+        .ventry-options .ventry-dd-search {
+            border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+        }
+        
+        .dark-mode .options .dd-search,
+        .ventry-dark-mode .ventry-options .ventry-dd-search {
+            border-bottom-color: #747473;
+        }
+        
+        .dd-search .dd-input,
+        .ventry-dd-search .ventry-dd-input {
+            padding: 16px;
+            padding-left: calc(16px * 3);
+            width: 168px;
+            border: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+            text-align: left;
+            color: #000;
+            font-size: 17px;
+            background-image: url(searchfield-icon.png);
+            background-position: 16px;
+            background-size: 16px;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: auto;
+        }
+        
+        .dark-mode .dd-search .dd-input,
+        .ventry-dark-mode .ventry-dd-search .ventry-dd-input {
+            color: #FFF;
+            background-color: #525251;
+        }
+        
+        .dd-search .dd-input:focus,
+        .ventry-dd-search .ventry-dd-input:focus {
+            -webkit-transition: all 275ms cubic-bezier(0.23, 1, 0.32, 1);
+            outline: none;
+            text-align: left;
+        }
+        
+        .dd-input::-webkit-input-placeholder,
+        .ventry-dd-input::-webkit-input-placeholder {
+            color: #8e8e93;
+        }
+        
+        .search-failed-plaque,
+        .ventry-search-failed-plaque {
+            text-align: center;
+            padding: 20px;
+            color: #8e8e93;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        .dark-mode .search-failed-plaque,
+        .ventry-dark-mode .ventry-search-failed-plaque {
+            color: #98989D;
+        }
+        
+        .rm-recent,
+        .ventry-rm-recent {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-image: url(regular-lang-remove.png);
+            background-size: 10px 10px;
+            top: 15px;
+            right: 10px;
+        }
+        
+        .rm-recent:hover,
+        .ventry-rm-recent:hover {
+            background-image: url(hover-lang-remove.png);
+        }
+        
+        .rm-recent:active,
+        .ventry-rm-recent:active {
+            background-image: url(down-lang-remove.png);
+        }
+        
+        .option_selected .rm-recent,
+        .ventry-option_selected .ventry-rm-recent {
+            background-image: url(down-active-lang-remove.png);
+        }
+        
+        .option_selected .rm-recent:hover,
+        .ventry-option_selected .ventry-rm-recent:hover {
+            background-image: url(hover-active-lang-remove.png);
+        }
+        
+        .option_selected .rm-recent:active,
+        .ventry-option_selected .ventry-rm-recent:active {
+            background-image: url(down-active-lang-remove.png);
+        }
+        
+        .ventry-hidden {
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        @-webkit-keyframes load4 {
+            0%,
+            100% {
+                box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+            }
+            12.5% {
+                box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+            }
+            25% {
+                box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+            }
+            37.5% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+            }
+            50% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+            }
+            62.5% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+            }
+            75% {
+                box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+            }
+            87.5% {
+                box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+            }
+        }
+        
+        @keyframes load4 {
+            0%,
+            100% {
+                box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+            }
+            12.5% {
+                box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+            }
+            25% {
+                box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+            }
+            37.5% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+            }
+            50% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+            }
+            62.5% {
+                box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+            }
+            75% {
+                box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+            }
+            87.5% {
+                box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+            }
+        }
+    </style>
+    <next-route-announcer>
+        <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;"></p>
+    </next-route-announcer>
+    <div>
